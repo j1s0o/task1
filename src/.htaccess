@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Kiểm tra nếu tệp hoặc thư mục tồn tại
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    # Kiểm tra nếu không phải là một tệp ảnh, CSS hoặc JS
+    RewriteCond %{REQUEST_URI} !\.(jpg|jpeg|png|gif|css|js)$ [NC]
+
+    # Chuyển hướng tất cả các yêu cầu tới index.php với tham số
+    RewriteRule ^(.*)$ index.php?$1 [L,QSA]
+</IfModule>
+

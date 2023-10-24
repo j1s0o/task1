@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        #chat-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 5px;
+        }
+        h1 {
+            color: #333;
+        }
+        #chat-messages {
+            border: 1px solid #ccc;
+            padding: 10px;
+            height: 300px;
+            overflow-y: scroll;
+        }
+        #chat-messages p {
+            margin: 0;
+            padding: 5px;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        input[type="text"] {
+            width: 95%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="chat-container">
+        <h1>Chat Room</h1>
+        <div id="chat-messages">
+            {% for message in messages %}
+                <p>{{ message.username }} : {{ message.comment | raw}}</p>
+            {% endfor %}
+        </div>
+        <form action="Controller/addcmt.php" method="post">
+            <input type="text" name="comment" placeholder="Type your message...">
+            <button>Send</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Bootstrap CSS -->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous"
+        />
+        <!-- Boxicon css -->
+        <link
+          href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+          rel="stylesheet"
+        />
+        <title>Register</title>
+    </head>
+<body>
+    <!--Register account-->
+<div  class="row d-flex justify-content-center align-items-center">
+    <div class="col-lg-12 col-xl-11">
+      <div class="row justify-content-center">
+        <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+          <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
+            Register
+          </p>
+          <form method="POST" action="Controller/register.php" class="mx-1 mx-md-4">
+            <div class="d-flex flex-row align-items-center mb-4">
+              <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+              <div class="form-outline flex-fill mb-0">
+                <input type="text" id="username" name = "username" class="form-control"/>
+                <label class="form-label" for="username">Username</label>
+              </div>
+            </div>
+  
+            <div class="d-flex flex-row align-items-center mb-4">
+              <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+              <div class="form-outline flex-fill mb-0">
+                <input type="password" id="password" name="password" class="form-control"  />
+                <label class="form-label" for="password">Password</label>
+              </div>
+            </div>
+  
+            <div class="d-flex flex-row align-items-center mb-4">
+              <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+              <div class="form-outline flex-fill mb-0">
+                <input type="password" id="confirm_password" name="confirm_password" class="form-control"  />
+                <label class="form-label" for="confirm_password">Confirm-Password</label>
+              </div>
+            </div>
+  
+            <div class="d-flex flex-row align-items-center mb-4">
+              <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+              <div class="form-outline flex-fill mb-0">
+                <a href="/login">login now bro!</a>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+              <button type="submit" class="btn btn-dark btn-lg" value="Submit">Create</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div> 
+</body>
+</html>
